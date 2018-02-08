@@ -1,4 +1,12 @@
-# WEBRES-game
-working title
+# Rigid-Body-Racers
 
-backup game scripts here
+ > this repo contains the muliplayer server code
+
+ socket.io multiplayer server for playcanvas game
+
+ ## install
+
+ ```
+$ npm i
+$ npm start
+ ```

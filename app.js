@@ -1,10 +1,11 @@
-var express = require('express');
-var app = express();
-var cors = require('cors');
+const PORT = process.env.VCAP_APP_PORT || 3000;
+const express = require('express');
+const app = express();
+const cors = require('cors');
 //setup cors
 app.use(cors({ origin: '*' }));
-var server = require('http').createServer(app);
-var io = require('socket.io')(server);
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 io.set('origins', ['*:*']);
 
 
@@ -50,4 +51,4 @@ io.sockets.on('connection', function (socket) {
 
 
 console.log('Server started.');
-server.listen(process.env.VCAP_APP_PORT);
+server.listen(PORT);
