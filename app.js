@@ -1,4 +1,4 @@
-const PORT = process.env.$PORT || $PORT || process.env.VCAP_APP_PORT || 3000;
+const PORT = process.env.PORT || process.env.VCAP_APP_PORT || 3000;
 const express = require('express');
 const app = express();
 const cors = require('cors');
