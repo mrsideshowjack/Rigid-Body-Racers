@@ -1,0 +1,7 @@
+runtime: nodejs
+env: flex
+service: rigid-body-racers
+manual_scaling:
+      instances: 1
+network:
+      instance_tag: websocket

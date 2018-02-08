@@ -1,0 +1,4 @@
+applications:
+- name: jack-test
+  buildpack: nodejs_buildpack
+  command: npm start
