@@ -27,6 +27,12 @@ function Player(id) {
 }
 
 io.sockets.on('connection', function (socket) {
+
+    socket.on('testreq', function (data) {
+        console.log('test page req:' + data);
+        socket.broadcast.emit('testres', 'socket success');
+    });
+
     socket.on('initialize', function () {
         var idNum = players.length;
         var newPlayer = new Player(idNum);

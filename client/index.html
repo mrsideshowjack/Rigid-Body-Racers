@@ -16,7 +16,10 @@
         var url = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
         var socket = io.connect(url);
         socket.on('connect', function (data) {
-            socket.emit('join', 'Hello World from client');
+            socket.emit('testreq', 'Hello World from client');
+        });
+        socket.on('testres', function (data) {
+            console.log('res' + data);
         });
     </script>
 </body>
