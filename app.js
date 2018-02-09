@@ -1,3 +1,4 @@
+'use strict';
 const PORT = process.env.PORT || process.env.VCAP_APP_PORT || 3000;
 const express = require('express');
 const app = express();
