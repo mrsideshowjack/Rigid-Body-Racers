@@ -1,3 +1,32 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rigid Body Racers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+</head>
+
+<body>
+    <h1>Rigid Body Racers</h1>
+    <h2>test page</h2>
+    <a href="./video-chat.html">video-chat</a>
+    <script>
+        var url = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+        var socket = io.connect(url);
+        socket.on('connect', function (data) {
+            socket.emit('testreq', 'Hello World from client');
+        });
+        socket.on('testres', function (data) {
+            console.log('res' + data);
+        });
+    </script>
+</body>
+
+</html> -->
+
 <!doctype html>
 <html>
 
@@ -23,7 +52,8 @@
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script>
         /** CONFIG **/
-        var SIGNALING_SERVER = "http://localhost";
+        var url = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+        var SIGNALING_SERVER = url;
         var USE_AUDIO = true;
         var USE_VIDEO = true;
         var DEFAULT_CHANNEL = 'some-global-channel-name';
